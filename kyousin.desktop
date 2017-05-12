@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Name=Kyousin banner v1.0
+Exec=awk -f /opt/kyousin_banner/kyousin.awk
+Type=Application
+StartupNotify=true
+Icon=/opt/kyousin_banner/kyousin.png
+Name[ja_JP]=kyousin
+
