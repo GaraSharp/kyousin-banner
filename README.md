@@ -1,56 +1,37 @@
-「凶シンモニター」
+---
+title : Readme.md
+begin : 2017-05-10 14:40:19 
+modif : 2023-12-24 18:34:42 
+---
+
+「凶シンモニター」(準備中)
 ==============
 
-(first appearance on 2017-05-12 18:27)
+~~他人のTwitterページ(Tweetではありません、念の為)を取り込み、何かしら変更があった場合に画面上にバナーを表示するという単純なプログラムです。~~
+Twitter がwget で取得不能なので、別の手段を模索中。
 
-他人のTwitterページ(Tweetではありません、念の為)を取り込み、何かしら変更があった場合に画面上にバナーを表示するという単純なプログラムです。
+現在は、ランダムに時間待ちをして、バナー表示するだけのコードと成り下がっております。
 
-#  ソースの入手
+# ソースの入手
 
-git clone https://github.com/GaraSharp/kyousin-banner
+git clone GaraSharp/kyousin-banner 
 
 でイケる ?
 
+# 作成
 
-#  導入
-
-1.  先ずは、Xt, Xlib関連のヘッダを導入しておきます
+1. 先ずは、Xt, Xlib関連のヘッダを導入しておきます
 
 ```Ubuntu
 $ sudo apt-get install libxt-dev
 ```
 
-2. 必要に応じて、kyousin.awk をいじって下さい
+2. コンパイル
 
-awkスクリプト中に、参照するTwitterページが埋め込んであります。
-変更がない場合、 「地震速報」様 (@earthquake_jp) のTwitterページをダウンロードします。
-
-
-3. コンパイル、インストール
-
-```コンパイル 
-$ make
+```
+make
 ```
 
-実行ファイルは、/opt/kyousin_banner/ に置かれます。
+今は、banner 表示だけしか能のないものなので、インストールの必要はありません。
 
-```インストール
-$ sudo make install
-```
-
-
-あと、GNOMEデスクトップの場合、kyousin.desktop ファイルをダブルクリックすると、
-「信用できないアプリケーションのランチャー」というダイアログが出ます。
-
-「Trust and Launch」をクリックすると、ランチャーとして登録され、実行されます。
-(古いGNOMEの場合、ファイルのプロパティから実行属性を付ける事で、実行可能ランチャーに出来ます)
-
-更に、
-
-```for GNOME
-$ cp kyousin.desktop ~/.local/share/applications/
-```
-
-とすると、チョットいい感じ ?
-(Superキーを押して、kyo、とタイプインしてみてネ)
-
+make して出来た place-bitmap を実行して、お楽しみ下さい。
